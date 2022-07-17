@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+    <style>
+        @page {
+            @top-left {
+                content: element(header);
+                vertical-align: bottom;
+                padding-bottom: 10px;
+            }
+
+            @bottom-left {
+                content: element(footer);
+                vertical-align: top;
+                border-top: 1px solid black;
+            }
+
+            size: A4 portrait;
+            margin: 2cm;
+        }
+
+        html,
+        body {
+            font-family: 'Roboto', sans-serif;
+            font-size: 12pt;
+        }
+
+        .arabic {
+            font-family: "Noto Sans Arabic", sans-serif;
+            font-size: 10pt;
+            font-style: normal;
+            font-weight: 100;
+        }
+
+        div#header {
+            display: block;
+            position: running(header);
+        }
+
+        div#content {
+            display: block;
+            text-align: justify;
+        }
+
+        div#footer {
+            display: block;
+            position: running(footer);
+        }
+
+        #footer p {
+            font-size: 10pt;
+        }
+
+        table {
+            page-break-inside: auto;
+        }
+
+        tr {
+            page-break-inside: avoid;
+            page-break-after: auto
+        }
+
+        h1 {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 14pt;
+            border-bottom: 1px solid black;
+        }
+
+        h2 {
+            display: block;
+            width: 100%;
+            text-align: center;
+            text-transform: capitalize;
+            font-size: 12pt;
+        }
+
+        p {
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="header">
+    <table style="margin: 0; width: 100%;">
+        <tr>
+            <td style="text-align: left">
+                Company Logo #1
+            </td>
+
+            <td style="text-align: right">
+                Company Logo #2
+            </td>
+        </tr>
+    </table>
+</div>
+<div id="footer">
+    <table style="width: 100%;">
+        <tbody>
+        <tr>
+            <td style="text-align: left">
+                <p>Company Name</p>
+                <p>Street Name, 123456</p>
+                <p>City, Country</p>
+            </td>
+            <td style="text-align: left">
+                <p>Telephone: +9999 999 9999</p>
+                <p>Facsimile: +9999 999 9999</p>
+                <p>Email: info@company.xx</p>
+            </td>
+            <td style="text-align: right">
+                <p class="arabic">اسم الشركة</p>
+                <p class="arabic">اسم الشارع 123456</p>
+                <p class="arabic">مدينة بلد</p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div id="content">
+    <h1>TEST REPORT</h1>
+    <table style="width: 100%">
+        <tbody>
+        <tr>
+            <td>Date and Time:</td>
+            <td>16.07.2022 16:29</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <h2>REPORT DETAILS</h2>
+
+    <table style="width: 100%">
+        <tbody>
+
+        <tr>
+            <td>Adult</td>
+            <td>2</td>
+        </tr>
+
+        <tr>
+            <td>Schoolchildren</td>
+            <td>1</td>
+        </tr>
+
+        <tr>
+            <td>Pre-school children</td>
+            <td>1</td>
+        </tr>
+
+
+        </tbody>
+    </table>
+</div>
+</body>
+
+</html>
